@@ -1,4 +1,4 @@
-# AX_ITEMS
+# AX_MISC
 # Usable items for your FiveM ESX server & misc
 This script was made to work with [mythic_progbar](https://github.com/HalCroves/mythic_progbar).
 Usable items have configurable animations and props, you just have to find the right ones for your
