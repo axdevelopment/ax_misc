@@ -9,7 +9,6 @@ AX.HudColour                        			= 222                                   -
 -- DISABLE DEFAULT GTA HUD -------------------------------------
 AX.HideGTAHud                       			= true
 -- AMMO CLIP ---------------------------------------------------
-AX.ClipItem                        			 = 'clip'                               -- ITEM IN YOUR DATABASE
 AX.ClipSize 						= 40					-- MAGAZINE SIZE
 AX.ClipTime 						= 1800					-- USAGE DURATION
 AX.ClipPBLabel 						= ''                      		-- TEXT INSIDE PROGRESSBAR / LEAVE '' IF YOU DON'T WANT A TEXT
@@ -20,8 +19,7 @@ AX.ClipAnim 						= "reload_aim"                          -- ANIMATION WHILE USI
 AX.ClipProp  						= "w_pi_vintage_pistol_mag1"	  	-- PROP WHILE USING / nil IF YOU DON'T WANT A PROP
 AX.ClipNotifyText                   			= "You filled up your magazine!"        -- NOTIFY TEXT AFTER USING ITEM
 AX.ClipErrorText                    			= "You don't have any weapon equipped!" -- NOTIFY TEXT IF PLAYER DOES NOT HOLD ANY WEAPON IN THEIR HANDS
--- AMMO BOX ----------------------------------------------------
-AX.BoxClipItem                      			= 'boxclip'                             
+-- AMMO BOX ----------------------------------------------------                         
 AX.BoxClipSize 						= 120					  			
 AX.BoxClipTime 						= 8000					  			
 AX.BoxClipPBLabel 					= ''                      			
@@ -33,7 +31,6 @@ AX.BoxClipProp  					= "prop_ld_ammo_pack_03"
 AX.BoxClipNotifyText                			= "You filled up your magazine with an ammo box!"
 AX.BoxClipErrorText                 			= "You don't have any weapon equipped!"
 -- BULLETPROOF VEST --------------------------------------------
-AX.BulletproofItem                  			= 'bulletproof'
 AX.BulletproofArmor 					= 100					-- AMOUNT ARMOR TO ADD TO THE PLAYER (0-100)
 AX.BulletproofTime 					= 7500					  			
 AX.BulletproofPBLabel 					= ''                      			
@@ -44,7 +41,6 @@ AX.BulletproofAnim 					= "michael_tux_fidget"
 AX.BulletproofProp  					= "prop_armour_pickup"	  			
 AX.BulletproofNotifyText           			= "You used 1x bulletproof vest"
 -- MEDIKIT -----------------------------------------------------            			-- GIVES 100 HP TO THE PLAYER
-AX.MedikitItem                      			= 'medikit'
 AX.MedikitTime 						= 7500                              
 AX.MedikitPBLabel 					= ''
 AX.MedikitCanCancel 					= true
@@ -54,7 +50,6 @@ AX.MedikitAnim 						= "michael_tux_fidget"
 AX.MedikitProp  					= "prop_ld_health_pack"
 AX.MedikitNotifyText               			= "You used 1x medikit"
 -- BANDAGE 'BANDAGE' -------------------------------------------
-AX.BandageItem                      			= 'bandage'
 AX.BandageHealth 					= 30                                    -- AMOUNT HP TO ADD TO THE PLAYER (0-100) 
 AX.BandageTime 						= 4000
 AX.BandagePBLabel 					= ''
