@@ -50,3 +50,40 @@ RegisterNetEvent('ax_items:remove:boxclip', function()
 	local xPlayer = ESX.GetPlayerFromId(source)
 	xPlayer.removeInventoryItem(BoxClipItem, 1)
 end)
+
+-- [[ UNTESTED OPTIMIZATION, TO TEST THIS, JUST DELETE THE CODE ABOVE AND UNCOMMENT THE CODE BELOW
+
+-- CONFIG ITEM NAMES
+local items = {
+    bulletproof = {event = 'ax_items:bulletproof', remove = true},
+    medikit = {event = 'ax_items:medikit', remove = true},
+    bandage = {event = 'ax_items:bandage', remove = true},
+    clip = {event = 'ax_items:clip', remove = false, removeEvent = 'ax_items:remove:clip'},
+    boxclip = {event = 'ax_items:boxclip', remove = false, removeEvent = 'ax_items:remove:boxclip'}
+}
+
+-- ON RESOURCE START
+AddEventHandler('onResourceStart', function(resourceName)
+    if (GetCurrentResourceName() ~= resourceName) then return end
+    print('Resource successfully started!')
+end)
+
+-- REGISTER USABLE ITEMS
+for itemName, config in pairs(items) do
+    ESX.RegisterUsableItem(itemName, function(source)
+        TriggerClientEvent(config.event, source)
+        if config.remove then
+            local xPlayer = ESX.GetPlayerFromId(source)
+            xPlayer.removeInventoryItem(itemName, 1)
+        end
+    end)
+
+    if config.removeEvent then
+        RegisterNetEvent(config.removeEvent, function()
+            local xPlayer = ESX.GetPlayerFromId(source)
+            xPlayer.removeInventoryItem(itemName, 1)
+        end)
+    end
+end
+
+]]
